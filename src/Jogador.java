@@ -14,8 +14,8 @@ public class Jogador {
         }  
   
         /*
-         *  A palavra reservada synchronized significa que sÛ uma Thread pode acessar
-         *  o mÈtodo de cada vez.
+         *  A palavra reservada synchronized significa que s√≥ uma Thread pode acessar
+         *  o m√©todo de cada vez.
          */
         
         public synchronized void atira(Jogador adversario) {  
@@ -25,16 +25,16 @@ public class Jogador {
         }  
   
         /*
-         * A implementaÁ„o do mÈtodo "atira" chama o mÈtodo "atiraDeVolta" do
+         * A implementa√ß√£o do m√©todo "atira" chama o m√©todo "atiraDeVolta" do
          * adversario para atirar no jogador.
          * 
-         * Ambos os mÈtodos est„o marcados com synchronized, vai ocorrer um DeadLock,
+         * Ambos os m√©todos est√£o marcados com synchronized, vai ocorrer um DeadLock,
          * pois:
-         * A Thread do Jogador 1 n„o poder· invocar o mÈtodo "atiraDeVolta" do 
-         * Jogador 2 enquanto o Jogador 2 n„o terminar de executar o mÈtodo "atira";
+         * A Thread do Jogador 1 n√£o poder√° invocar o m√©todo "atiraDeVolta" do 
+         * Jogador 2 enquanto o Jogador 2 n√£o terminar de executar o m√©todo "atira";
          *  
-		 * E Thread do Jogador 2 n„o vai terminar de executar o mÈtodo "atira" enquanto
-		 * ela n„o chamar o mÈtodo "atiraDeVolta" do Jogador 1.
+	 * E Thread do Jogador 2 n√£o vai terminar de executar o m√©todo "atira" enquanto
+	 * ela n√£o chamar o m√©todo "atiraDeVolta" do Jogador 1.
          */
         
         public synchronized void atiraDeVolta(Jogador adversario) {  
